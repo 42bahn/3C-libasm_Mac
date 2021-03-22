@@ -1,0 +1,18 @@
+section	.data
+	msg db "hello world", 0x0A
+
+section	.text
+	global _main
+
+_main :
+	mov rax, 0x2000004
+	mov rdi, 1
+	mov rsi, msg
+	mov rdx, 12
+	syscall
+	mov rax, 0x2000001
+	mov rdi, 0
+	syscall
+
+; compile : nasm -f macho64 mac_hello.s
+; execute : gcc -o hello mac_hello.o
