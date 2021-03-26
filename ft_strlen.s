@@ -1,33 +1,17 @@
-section	.data
-	msg	db	"abcde", 0x0a, 0x00
 section .text
-	global _start
-
-_start:
-	mov rcx, 0
-	mov rdi, msg
-	call _ft_strlen
-	
-	add rcx, 48
-
-	mov rax, 1
-	
-	mov rdi, 1
-	mov rsi, rcx
-	mov rdx, 1	
-	syscall
-
-	mov rax, 60
-	mov rdi, 0
-	syscall
+	global _ft_strlen
 
 _ft_strlen:
+	mov rcx, 0
+	jmp count
+count:
 	cmp BYTE [rdi + rcx], 0x00
-	je _end	
+	je end	
 
 	inc rcx
-	jmp _ft_strlen	
+	jmp count	
 
-_end:
+end:
+	mov rax, rcx
 	ret
 
