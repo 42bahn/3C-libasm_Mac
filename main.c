@@ -8,26 +8,21 @@ size_t	ft_strlen(const char *s);
 ssize_t ft_write(int fd, const void *buf, size_t count);
 ssize_t ft_read(int fd, const void *buf, size_t count);
 char *ft_strcpy(char *dest, const char *src);
+int strcmp(const char *s1, const char *s2);
 */
 
 size_t	_ft_strlen(const char *s);
 ssize_t _ft_write(int fd, const void *buf, size_t count);
 ssize_t _ft_read(int fd, const void *buf, size_t count);
 char *_ft_strcpy(char *dest, const char *src);
+int _ft_strcmp(const char *s1, const char *s2);
 
 int	main(void)
 {
-	char	*str;
-	char	*buf;
-	ssize_t ret;
-	int	i;
-
-	str = "abcde";
-	buf = malloc(sizeof(char) * _ft_strlen(str) + 1);
-
-	_ft_strcpy(buf, str);
-	printf("%s\n", buf);
-
+	printf("%d\n", _ft_strcmp("abcdz", "abcde"));
+	printf("%d\n", _ft_strcmp("abcda", "abcde"));
+	printf("%d\n", _ft_strcmp("abcd", "abcde"));
+	printf("%d\n", _ft_strcmp("abcdeeeee", "abcde"));
 	
 
 /* Linux

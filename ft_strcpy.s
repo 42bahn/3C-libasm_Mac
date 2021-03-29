@@ -6,7 +6,7 @@ _ft_strcpy:
 	jmp	check
 	
 check:
-	cmp	BYTE [rsi, rcx], 0x00
+	cmp	BYTE [rsi + rcx], 0x00
 	jne	copy
 	mov	BYTE [rdi + rcx], 0x00
 	mov	rax, rdi
