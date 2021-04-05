@@ -6,7 +6,7 @@
 #    By: bahn <bahn@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/05 15:29:22 by bahn              #+#    #+#              #
-#    Updated: 2021/04/05 16:23:15 by bahn             ###   ########.fr        #
+#    Updated: 2021/04/05 19:30:01 by bahn             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ $(NAME)		: $(OBJS)
 		ranlib $(NAME)
 
 .s.o		: $(SRCS)
-		$(NASM) -I$(INC) $(LFLAG) $< -o $@
+		$(NASM) -I$(INC) $(AFLAG) $< -o $@
 	
 clean		: 
 		$(RM) $(OBJS)
