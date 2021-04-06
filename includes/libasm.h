@@ -6,7 +6,7 @@
 /*   By: bahn <bahn@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:08:06 by bahn              #+#    #+#             */
-/*   Updated: 2021/04/06 14:27:47 by bahn             ###   ########.fr       */
+/*   Updated: 2021/04/06 19:59:37 by bahn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-ssize_t		_ft_write(int fd, const void *buf, size_t nbyte);
-size_t		_ft_read(int fd, void *buf, size_t count);
-size_t		_ft_strlen(const char *s);
-int			_ft_strcmp(const char *s1, const char *s2);
-char		*_ft_strcpy(char *dest, const char *src);
-char		*_ft_strdup(const char *s);
+ssize_t		ft_write(int fd, const void *buf, size_t nbyte);
+size_t		ft_read(int fd, void *buf, size_t count);
+size_t		ft_strlen(const char *s);
+int			ft_strcmp(const char *s1, const char *s2);
+char		*ft_strcpy(char *dest, const char *src);
+char		*ft_strdup(const char *s);
 
 #endif
 
