@@ -1,5 +1,5 @@
 section	.text
-	extern	malloc
+	extern	_malloc
 	extern 	_ft_strlen
 	extern	_ft_strcpy
 	extern	_ft_write
@@ -12,7 +12,7 @@ _ft_strdup:
 	
 	inc	rax
 	mov	rdi, rax
-	call	malloc
+	call	_malloc
 
 	cmp	rax, 0
 	je	exit
