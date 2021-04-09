@@ -15,12 +15,12 @@ _ft_strdup:
 	call	_malloc
 
 	cmp	rax, 0
-	je	exit
+	je	err_malloc
 	
 	mov	rdi, rax
 	pop	rsi
 	call	_ft_strcpy
 	ret
 
-exit:
+err_malloc:
 	ret
