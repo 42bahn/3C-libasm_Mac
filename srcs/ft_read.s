@@ -3,11 +3,9 @@ section	.text
 	extern	___error
 
 _ft_read:
-	mov	rax, 2000003
+	mov	rax, 0x2000003
 	syscall
-	
 	jc	set_errno
-	
 	ret
 
 set_errno:
