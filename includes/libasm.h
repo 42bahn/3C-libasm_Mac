@@ -6,7 +6,7 @@
 /*   By: bahn <bahn@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:08:06 by bahn              #+#    #+#             */
-/*   Updated: 2021/04/06 19:59:37 by bahn             ###   ########.fr       */
+/*   Updated: 2021/04/09 11:48:36 by bahn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <errno.h>
 
 ssize_t		ft_write(int fd, const void *buf, size_t nbyte);
 size_t		ft_read(int fd, void *buf, size_t count);
