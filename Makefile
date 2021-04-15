@@ -6,7 +6,7 @@
 #    By: bahn <bahn@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/05 15:29:22 by bahn              #+#    #+#              #
-#    Updated: 2021/04/15 12:55:44 by bahn             ###   ########.fr        #
+#    Updated: 2021/04/15 13:15:27 by bahn             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRC_FILES	= ft_write.s \
 		  ft_strcpy.s \
 		  ft_strdup.s
 
-SRC_FILES_BONUS	= ft_atoi_base.s
+SRC_FILES_BONUS	= ft_atoi_base_bonus.s
 
 INC		= $(addprefix $(INC_DIR), $(INC_FILES))
 SRCS		= $(addprefix $(SRC_DIR), $(SRC_FILES))
@@ -61,7 +61,7 @@ clean		:
 fclean		: clean
 		$(RM) $(NAME)
 
-re		: fclean all
+re		: fclean all bonus
 
 .PHONY		: all, clean, fclean, re, bonus
 		
