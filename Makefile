@@ -6,7 +6,7 @@
 #    By: bahn <bahn@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/05 15:29:22 by bahn              #+#    #+#              #
-#    Updated: 2021/04/15 12:49:46 by bahn             ###   ########.fr        #
+#    Updated: 2021/04/15 12:55:44 by bahn             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ $(NAME)		: $(OBJS)
 		$(NASM) -I$(INC) $(AFLAG) $< -o $@
 	
 clean		: 
-		$(RM) $(OBJS)
+		$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean		: clean
 		$(RM) $(NAME)
